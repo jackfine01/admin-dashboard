@@ -24,21 +24,41 @@ html,body{
 .main{
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 2fr 1fr;
     background-color: lightgrey;
     gap: 15px;
 }
 
-.projCard, .leftSideCard{
+.projCard{
     height: 200px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 20px
 }
 .projArea{
     padding: 8px;
 }
-.projTitle{
+.projTitle, .leftSideCardTitle, .leftSideCardTitle{
     font-weight: bold;
+}
+
+.leftSideBar{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+
+.leftSideBarArea{
+    background-color: white;
+    border-radius: 10px;
+}
+.profile{
+    display: flex;
 }
