@@ -1,16 +1,16 @@
 html,body{
     margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .content{
     display:grid;
-    grid-template-columns: .2fr .8fr;
-    grid-template-rows: .15fr .85fr;
-    gap: 15px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 .dashboard{
     grid-area: 1 / 1 / 3 / 1;
-    background-color: blue;
+    background-color: rgb(110, 110, 255);
     color: white;
     font-weight: bold;
     font-size: 24px;
@@ -26,14 +26,19 @@ html,body{
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: lightgrey;
-    gap: 15px;
+    padding: 8px;
+}
+
+.projTitleHeader{
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    grid-area:1 / 1 / 1 / 1 ;
 }
 
 .projCard{
     height: 200px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
     background-color: white;
     border-radius: 25px;
     border: 1px solid black;
@@ -45,19 +50,35 @@ html,body{
 .projTitle, .leftSideCardTitle, .leftSideCardTitle{
     font-weight: bold;
 }
+.projTitle{
+    align-self: end;
+}
+.projArea{
+    color: grey;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px,1fr));
+    gap: 15px;
+    grid-area: 2 / 1 / 2 / 1;
+}
+
 
 .leftSideBar{
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
     padding: 8px;
+    grid-area: 2 / 2 / 2 / 2;
 }
 
 
 .leftSideBarArea{
     background-color: white;
     border-radius: 10px;
+    display: grid;
+    padding: 8px;
 }
 .profile{
     display: flex;
